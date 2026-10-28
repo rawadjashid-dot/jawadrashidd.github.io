@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Projects · Ahmed Jawad Rashid</title>
+  <meta name="description" content="Ahmed Jawad Rashid, electrical engineer in Dhaka, Bangladesh, working on computer vision, edge AI and reinforcement learning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to main content</a>
+
+<div class="nav-wrap">
+  <nav class="nav" aria-label="Main">
+    <a class="logo" href="index.html" aria-label="Home">AJR</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html" class="active" aria-current="page">Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="opinions.html">Opinions</a>
+      <a href="cv.html">CV</a>
+    </div>
+    <span class="nav-spacer" aria-hidden="true"></span>
+  </nav>
+</div>
+
+<main id="main" class="wrap-wide">
+  <header class="page-head">
+    <h1>Projects</h1>
+    <p class="page-sub">Things I have built, from detection models to hardware.</p>
+  </header>
+
+
+
+    <!-- Each row: kind on the left, then title, tags and one-line description, image on the right.
+         Put images in images/projects/ with the file names below. -->
+    <ul class="posts">
+      <li class="post-row">
+        <div class="pr-side">Computer vision<br><span>Open source</span></div>
+        <div class="pr-main">
+          <h3><a href="https://github.com/jawadrashidd/pcbkit">PCBKIT: PCB Defect Dataset Toolkit</a></h3>
+          <p class="chips"><span>Python</span><span>OpenCV</span><span>Shapely</span></p>
+          <p>Tiles high-resolution PCB images without cutting any defect, and converts YOLO-OBB labels to DOTA.</p>
+        </div>
+        <a class="pr-img" href="https://github.com/jawadrashidd/pcbkit" tabindex="-1" aria-hidden="true"><img src="images/projects/pcbkit.jpg" alt="" onerror="this.parentNode.classList.add('empty'); this.remove();"></a>
+      </li>
+      <li class="post-row">
+        <div class="pr-side">Computer vision</div>
+        <div class="pr-main">
+          <h3><a href="https://github.com/jawadrashidd/YOLO-V8-Traffic-Vehicle-Counter">Traffic Vehicle Detection and Counting</a></h3>
+          <p class="chips"><span>YOLOv8</span><span>OpenCV</span><span>Tracking</span></p>
+          <p>YOLOv8 on a custom car and truck dataset (0.93 mAP50), with tracking to count vehicles crossing a line.</p>
+        </div>
+        <a class="pr-img" href="https://github.com/jawadrashidd/YOLO-V8-Traffic-Vehicle-Counter" tabindex="-1" aria-hidden="true"><img src="images/projects/traffic.jpg" alt="" onerror="this.parentNode.classList.add('empty'); this.remove();"></a>
+      </li>
+      <li class="post-row">
+        <div class="pr-side">Control systems</div>
+        <div class="pr-main">
+          <h3><a href="https://github.com/jawadrashidd/Ball-Balancing-Control-System-with-PID-Controller-Implementation">Ball Balancing Platform Control</a></h3>
+          <p class="chips"><span>Arduino</span><span>PID</span><span>Servo</span></p>
+          <p>An Arduino ball-on-beam balancer with ultrasonic feedback and a tuned PID controller.</p>
+        </div>
+        <a class="pr-img" href="https://github.com/jawadrashidd/Ball-Balancing-Control-System-with-PID-Controller-Implementation" tabindex="-1" aria-hidden="true"><img src="images/projects/ball-balance.jpg" alt="" onerror="this.parentNode.classList.add('empty'); this.remove();"></a>
+      </li>
+      <li class="post-row">
+        <div class="pr-side">Computer architecture</div>
+        <div class="pr-main">
+          <h3><a href="https://github.com/jawadrashidd/SAP-01">SAP-1 8-bit Computer</a></h3>
+          <p class="chips"><span>Bus design</span><span>Proteus</span></p>
+          <p>A simulated 8-bit computer with a shared bus and ring-counter controller running LDA, ADD, SUB, OUT and HLT.</p>
+        </div>
+        <a class="pr-img" href="https://github.com/jawadrashidd/SAP-01" tabindex="-1" aria-hidden="true"><img src="images/projects/sap1.jpg" alt="" onerror="this.parentNode.classList.add('empty'); this.remove();"></a>
+      </li>
+      <li class="post-row">
+        <div class="pr-side">Embedded systems</div>
+        <div class="pr-main">
+          <h3><a href="https://github.com/jawadrashidd/Bluetooth-Interfacing-with-8051-Microcontroller-using-Assembly-Language">Bluetooth Interfacing with 8051</a></h3>
+          <p class="chips"><span>8051 assembly</span><span>HC-05</span></p>
+          <p>Bluetooth-controlled timer, Morse code, LED matrix, encryption and relay switching, written in assembly.</p>
+        </div>
+        <a class="pr-img" href="https://github.com/jawadrashidd/Bluetooth-Interfacing-with-8051-Microcontroller-using-Assembly-Language" tabindex="-1" aria-hidden="true"><img src="images/projects/bt8051.jpg" alt="" onerror="this.parentNode.classList.add('empty'); this.remove();"></a>
+      </li>
+      <li class="post-row">
+        <div class="pr-side">Digital logic</div>
+        <div class="pr-main">
+          <h3><a href="https://github.com/jawadrashidd/Snake-Ladder-Game-using-Logic-Gates-">Digital Snake and Ladder Game</a></h3>
+          <p class="chips"><span>74-series ICs</span><span>Proteus</span></p>
+          <p>A two-player game built from logic ICs on a 4×4 LED board, from dice roll to win detection.</p>
+        </div>
+        <a class="pr-img" href="https://github.com/jawadrashidd/Snake-Ladder-Game-using-Logic-Gates-" tabindex="-1" aria-hidden="true"><img src="images/projects/snake-ladder.jpg" alt="" onerror="this.parentNode.classList.add('empty'); this.remove();"></a>
+      </li>
+    </ul>
+</main>
+
+<footer class="wrap footer">
+  <a href="mailto:ahmedjawad@iut-dhaka.edu">Contact</a>
+  <a href="https://github.com/jawadrashidd">GitHub</a>
+  <a href="https://linkedin.com/in/ahmed-jawad-rashid">LinkedIn</a>
+  <span class="copy">© 2026 Ahmed Jawad Rashid</span>
+</footer>
+
+</body>
+</html>

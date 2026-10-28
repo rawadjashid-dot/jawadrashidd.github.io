@@ -1,16 +1,23 @@
 # Academic website
 
-A static site with four sections on one page: About, Projects, Publications and Opinions. It needs no build step. Fonts (Inter, JetBrains Mono) load from Google Fonts.
+A static site with six pages: Home, About, Projects, Publications, Opinions and CV. It needs no build step. Fonts (Inter, JetBrains Mono) load from Google Fonts.
 
 Like wongmjane.com, the site is white for visitors in light mode and dark for visitors whose system is in dark mode. To make it always white, delete the `@media (prefers-color-scheme: dark)` block near the top of `style.css`, and change `content="light dark"` to `content="light"` in the `color-scheme` meta tag of each HTML file.
 
+The top bar is copied into every page. To rename or add a link, change it in all seven HTML files.
+
 ```
-index.html              the whole site
-style.css               all styling
+index.html              Home: name, location, one-line bio, links
+about.html              About: a few paragraphs and tools
+projects.html           Projects
+publications.html       Publications
+opinions.html           Opinions (list of pieces)
 opinions/template.html  copy this for each opinion piece
+cv.html                 CV: PDF preview, then education, teaching, honors, leadership
+style.css               all styling
 images/photo.jpg        your photo (add it, square)
 images/projects/*.jpg   one image per project (add them)
-cv.pdf                  your CV (add it)
+cv.pdf                  your CV (add it; cv.html shows it)
 ```
 
 ## Images to add
@@ -33,7 +40,7 @@ Project images are cropped to a 16:10 shape. A screenshot, photo of the hardware
 
 1. Copy `opinions/template.html` to a new file, e.g. `opinions/why-real-datasets-matter.html`.
 2. Fill in the title, date, reading time and text.
-3. In `index.html`, find the Opinions section and replace one of the three placeholder entries: set its `href` to your new file, and fill in the title, date and first sentence or two.
+3. In `opinions.html`, find the list and replace one of the three placeholder entries: set its `href` to your new file, and fill in the title, date and first sentence or two.
 4. Delete any placeholder entries you don't use before publishing.
 
 ## Publish on GitHub Pages
