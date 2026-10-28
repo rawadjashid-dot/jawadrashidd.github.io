@@ -232,16 +232,40 @@ h1 {
 .op-intro { color: var(--muted); font-size: 0.88rem; line-height: 1.8; margin: -12px 0 28px; }
 .op-list { list-style: none; margin: 0; padding: 0; }
 .op-list li + li { margin-top: 20px; }
+/* Each opinion is a <details> card: click the summary to open the full piece, click again to close. */
 .op-card {
   display: block;
-  padding: 26px 24px 30px;
   border-radius: 12px;
   background: var(--card);
+  scroll-margin-top: 96px;
 }
-.op-card:hover { background: var(--card-hover); text-decoration: none; }
+.op-card > summary {
+  display: block;
+  list-style: none;
+  cursor: pointer;
+  padding: 26px 24px 26px;
+  border-radius: 12px;
+}
+.op-card > summary::-webkit-details-marker { display: none; }
+.op-card > summary:hover { background: var(--card-hover); }
+.op-card > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.op-card[open] > summary { border-radius: 12px 12px 0 0; }
+
 .op-title { display: flex; gap: 12px; align-items: baseline; font-size: 1.2rem; line-height: 1.4; color: var(--text); }
 .op-mark { font-size: 1.15rem; flex: none; }
+.op-date { color: var(--muted); }
 .op-excerpt { display: block; margin-top: 12px; font-size: 0.8rem; line-height: 2; color: var(--text-2); }
+.op-card[open] .op-excerpt { display: none; }
+
+.op-toggle { display: block; margin-top: 14px; font-size: 0.78rem; color: var(--muted); }
+.op-toggle::before { content: "Read the full piece ↓"; }
+.op-card[open] .op-toggle::before { content: "Close ↑"; }
+
+.op-full { padding: 4px 24px 32px; border-top: 1px solid var(--line); }
+.op-full .op-meta { margin: 20px 0 24px; font-size: 0.78rem; color: var(--muted); }
+.op-full p { font-size: 0.88rem; line-height: 2; color: var(--text-2); margin: 0 0 18px; max-width: 46rem; }
+.op-full h2 { font-family: var(--mono); font-weight: 500; font-size: 1.02rem; color: var(--text); margin: 32px 0 12px; }
+.op-full blockquote { margin: 28px 0 8px; padding: 2px 0 2px 18px; border-left: 3px solid var(--line); color: var(--muted); font-size: 0.88rem; line-height: 2; }
 
 /* ===================== ABOUT ===================== */
 .prose p { font-size: 1.12rem; line-height: 1.75; color: var(--text-2); margin-bottom: 18px; max-width: 40rem; }
@@ -342,7 +366,8 @@ h1 {
   .pr-main h3 { font-size: 1.35rem; }
   .pr-img { max-width: 100%; }
 
-  .op-card { padding: 20px 18px 24px; }
+  .op-card > summary { padding: 20px 18px 22px; }
+  .op-full { padding: 4px 18px 24px; }
   .op-title { font-size: 1.02rem; }
   .copy { margin-left: 0; width: 100%; }
 }

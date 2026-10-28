@@ -35,29 +35,40 @@
     <h1>Opinions</h1>
     <p class="page-sub">Notes on research, teaching and engineering. Each one takes a few minutes to read.</p>
   </header>
-
-
-
-    <!-- PLACEHOLDERS: replace these with your own pieces.
-         Each card links to a page in opinions/; copy opinions/template.html to start one. -->
     <ol class="op-list">
+      <!-- Newest first. To add a piece, copy the whole <li> ... </li> block below,
+           give the <details> a new short id, and replace the title, date, excerpt and paragraphs. -->
       <li>
-        <a class="op-card" href="opinions/template.html">
-          <span class="op-title"><span class="op-mark" aria-hidden="true">📕</span>Opinion 1: Title of your first piece (Month 2026, 4 min)</span>
-          <span class="op-excerpt">The first two or three sentences of the piece go here, so a reader can tell what the argument is before clicking through. Keep it to about three lines...</span>
-        </a>
-      </li>
-      <li>
-        <a class="op-card" href="opinions/template.html">
-          <span class="op-title"><span class="op-mark" aria-hidden="true">📗</span>Opinion 2: Title of your second piece (Month 2026, 6 min)</span>
-          <span class="op-excerpt">The first two or three sentences of the piece go here, so a reader can tell what the argument is before clicking through. Keep it to about three lines...</span>
-        </a>
-      </li>
-      <li>
-        <a class="op-card" href="opinions/template.html">
-          <span class="op-title"><span class="op-mark" aria-hidden="true">📘</span>Opinion 3: Title of your third piece (Month 2026, 3 min)</span>
-          <span class="op-excerpt">The first two or three sentences of the piece go here, so a reader can tell what the argument is before clicking through. Keep it to about three lines...</span>
-        </a>
+        <details class="op-card" id="nilkhet">
+          <summary>
+            <span class="op-title"><span class="op-mark" aria-hidden="true">📕</span><span class="op-text">Opinion 1: Do you think we are going to see Nilkhet getting squashed with highrise buildings anytime soon? <span class="op-date">(October 2026, 4 min)</span></span></span>
+            <span class="op-excerpt">In the first lecture of my AI course, I walk students from Shockley's lab to ChatGPT. Somewhere in the middle, someone always asks whether AI will replace us. My answer is no, because the history on those slides was never about technology. It is about people choosing...</span>
+            <span class="op-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="op-full">
+            <p class="op-meta">Written after the first lecture of EEE 4709</p>
+      <p>In the first lecture of EEE 4709, Artificial Intelligence and Machine Learning, I start with a history lesson rather than an equation. The slides begin with William Shockley in the 1950s and end with robot arms and the open problems of physical AI. Somewhere in the middle, a student always asks the question everyone in the room is thinking: will AI replace us?</p>
+      <p>My answer is no. That isn't because the models are weak. They are good, and they get better every few months. It's because the story on those slides was never really about technology. It is a story about people choosing.</p>
+
+      <h2>The history of technology is a history of taste</h2>
+      <p>In 1956, Shockley set up a semiconductor lab in Mountain View and hired some of the brightest young engineers he could find. In 1957, eight of them walked out. They became known as the "traitorous eight", and they founded Fairchild Semiconductor. Two of them, Robert Noyce and Gordon Moore, later started Intel. Another, Eugene Kleiner, co-founded Kleiner Perkins, which went on to back Genentech, Sun and Compaq.</p>
+      <p>None of those moves came out of a calculation. Leaving a famous scientist's lab to build something from nothing was a judgement about people, about what was worth building and who was worth building it with. That judgement is what I mean by taste.</p>
+      <p>My own field works the same way. ImageNet was not an algorithm. It was a decision by Fei-Fei Li and her team that millions of labelled images were worth years of work, at a time when most people thought they weren't. AlexNet won in 2012 because three people in Toronto bet on deep networks and GPUs when that bet was unfashionable. One of them, Ilya Sutskever, carried it from AlexNet to sequence-to-sequence models and then to GPT.</p>
+      <p>A model can now write code, summarise a paper and draw a convincing picture. What it cannot do is want something. It cannot decide that a problem matters before anyone agrees that it does. Taste is exactly that: choosing what is worth doing before the data can tell you.</p>
+
+      <h2>We value where things come from</h2>
+      <p>The second reason is legacy. We remember the traitorous eight. We tell the story of Noyce and Moore. Students learn the names on the AlexNet paper. Much of what makes these achievements matter to us is who did them, and what it cost them.</p>
+      <p>People pay more for a handmade chair than for a factory one that is just as strong. We keep our grandparents' letters even when the handwriting is hard to read. It isn't the object we value. It's the person behind it, and the line that connects them to us. Something a model produces in seconds has no such line. It can be useful, very useful, but it is hard to be proud of.</p>
+      <p>This is also why I tell my students their work matters even when a model could produce something similar. The PCB defect datasets my collaborators and I built are tiny next to ImageNet. But they exist because we decided that boards from real fabrication runs were worth photographing and labelling, defect by defect. That decision, and our names on it, is the part no model made.</p>
+
+      <h2>What AI will change</h2>
+      <p>None of this means AI changes nothing. The last part of the same lecture is about money: hundreds of billions spent on data centres, deals that loop between the same few companies, and the open question of whether this is a bubble. Work that is mostly routine will change, some of it will disappear, and pretending otherwise does students no favours.</p>
+      <p>There is also a fair argument that taste can be learned. Recommendation systems already predict what we will like, and models trained on human preferences are getting better at judging quality. But predicting what people liked yesterday is not the same as deciding what should exist tomorrow. And a judgement only becomes a legacy when someone stands behind it.</p>
+
+      <blockquote>One slide near the end of my lecture asks, "Do we need cars to fly?" It's half a joke. Technology can do almost anything we ask of it. Someone still has to decide what is worth asking for, and that someone is us.</blockquote>
+
+          </div>
+        </details>
       </li>
     </ol>
 </main>
@@ -69,5 +80,13 @@
   <span class="copy">© 2026 Ahmed Jawad Rashid</span>
 </footer>
 
+<script>
+  // Opens the opinion named in the address, e.g. opinions.html#nilkhet
+  (function () {
+    var id = decodeURIComponent(location.hash.slice(1));
+    var el = id && document.getElementById(id);
+    if (el && el.tagName === 'DETAILS') { el.open = true; el.scrollIntoView(); }
+  })();
+</script>
 </body>
 </html>
