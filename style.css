@@ -283,17 +283,26 @@ h1 {
   color: var(--text);
 }
 .btn:hover { background: var(--chip); text-decoration: none; }
-.pdf-frame {
-  height: 80vh;
-  min-height: 560px;
+.cv-file {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 28px;
   border: 1px solid var(--line);
-  border-radius: 12px;
-  overflow: hidden;
+  border-radius: 14px;
   background: var(--card);
+  color: var(--text);
 }
-.pdf-frame object { width: 100%; height: 100%; display: block; }
-.pdf-fallback { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; color: var(--muted); padding: 24px; text-align: center; }
-.pdf-frame + .group { margin-top: 72px; }
+.cv-file:hover { background: var(--card-hover); text-decoration: none; }
+.cv-file:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.cv-icon { flex: none; width: 56px; height: 56px; display: grid; place-items: center; border-radius: 12px; background: var(--bg); border: 1px solid var(--line); color: var(--text-2); }
+.cv-icon svg { width: 32px; height: 32px; }
+.cv-text { flex: 1; min-width: 0; }
+.cv-name { display: block; font-size: 1.1rem; font-weight: 600; }
+.cv-hint { display: block; margin-top: 2px; font-size: 0.9rem; color: var(--muted); }
+.cv-arrow { flex: none; font-size: 1.3rem; color: var(--muted); }
+.cv-file:hover .cv-arrow { color: var(--text); }
+.cv-file + .group { margin-top: 72px; }
 
 /* ===================== FOOTER ===================== */
 .footer {
@@ -341,7 +350,8 @@ h1 {
   .page-head h1 { font-size: 2.1rem; }
   .home { padding-top: 40px; }
   .prose p { font-size: 1.03rem; }
-  .pdf-frame { height: 70vh; min-height: 420px; }
+  .cv-file { padding: 20px; gap: 16px; }
+  .cv-icon { width: 48px; height: 48px; }
 }
 
 @media (max-width: 480px) {

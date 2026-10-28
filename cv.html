@@ -31,19 +31,21 @@
 </div>
 
 <main id="main" class="wrap">
-  <header class="page-head cv-head">
+  <header class="page-head">
     <h1>CV</h1>
-    <a class="btn" href="cv.pdf" download>Download PDF</a>
   </header>
 
-  <div class="pdf-frame">
-    <object data="cv.pdf#view=FitH" type="application/pdf" aria-label="CV preview">
-      <div class="pdf-fallback">
-        <p>Your browser can't show the PDF here.</p>
-        <a class="btn" href="cv.pdf">Open the CV</a>
-      </div>
-    </object>
-  </div>
+  <!-- Opens cv.pdf (kept next to index.html) in a new tab, where it can be read or downloaded -->
+  <a class="cv-file" href="cv.pdf" target="_blank" rel="noopener">
+    <span class="cv-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M6 2.8h8.5L19 7.3v13.9H6z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M14 3v5h5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><text x="12.5" y="17.2" text-anchor="middle" font-size="4.6" font-weight="700" fill="currentColor" font-family="Inter, sans-serif">PDF</text></svg>
+    </span>
+    <span class="cv-text">
+      <span class="cv-name">Ahmed Jawad Rashid · CV</span>
+      <span class="cv-hint">Click to open or download the PDF</span>
+    </span>
+    <span class="cv-arrow" aria-hidden="true">↗</span>
+  </a>
 
     <div class="group">
       <h2>Education</h2>
@@ -51,17 +53,17 @@
       <ul class="table">
         <li>
           <span class="t-org">Islamic University of Technology</span>
-          <span class="t-main">M.Sc. in Electrical and Electronic Engineering<small>CGPA 4.00/4.00 · Supervisor <a href="https://eee.iutoic-dhaka.edu/profile/asim">Prof. Dr. Golam Sarowar</a></small></span>
+          <span class="t-main">M.Sc. in Electrical and Electronic Engineering<small>Supervisor <a href="https://eee.iutoic-dhaka.edu/profile/asim">Prof. Dr. Golam Sarowar</a></small></span>
           <span class="t-year">2026</span>
         </li>
         <li>
           <span class="t-org">Islamic University of Technology</span>
-          <span class="t-main">B.Sc. in Electrical and Electronic Engineering<small>CGPA 3.92/4.00 · 98th percentile · Supervisor <a href="https://nadimahmed.faculty.bio/">Mr. Nadim Ahmed</a></small></span>
+          <span class="t-main">B.Sc. in Electrical and Electronic Engineering<small>Supervisor <a href="https://nadimahmed.faculty.bio/">Mr. Nadim Ahmed</a></small></span>
           <span class="t-year">2024</span>
         </li>
         <li>
           <span class="t-org">Notre Dame College</span>
-          <span class="t-main">Higher Secondary School Certificate<small>GPA 5.00/5.00</small></span>
+          <span class="t-main">Higher Secondary School Certificate</span>
           <span class="t-year">2019</span>
         </li>
       </ul>
