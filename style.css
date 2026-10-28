@@ -253,7 +253,7 @@ h1 {
 
 .op-title { display: flex; gap: 12px; align-items: baseline; font-size: 1.2rem; line-height: 1.4; color: var(--text); }
 .op-mark { font-size: 1.15rem; flex: none; }
-.op-date { color: var(--muted); }
+.op-date { display: block; margin-bottom: 8px; font-size: 0.8rem; color: var(--muted); }
 .op-excerpt { display: block; margin-top: 12px; font-size: 0.8rem; line-height: 2; color: var(--text-2); }
 .op-card[open] .op-excerpt { display: none; }
 
